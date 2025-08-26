@@ -8,16 +8,6 @@
 2.  [核心问题：TCP 粘包/拆包](#2-核心问题tcp-粘包拆包)
 3.  [解决方案：`LengthFieldBasedFrameDecoder`](#3-解决方案lengthfieldbasedframedecoder)
 4.  [项目结构](#4-项目结构)
-5.  [如何运行](#5-如何运行)
-    *   [先决条件](#先决条件)
-    *   [启动服务器](#启动服务器)
-    *   [启动客户端](#启动客户端)
-6.  [演示与结果](#6-演示与结果)
-7.  [关键代码解析](#7-关键代码解析)
-    *   [自定义协议消息](#自定义协议消息)
-    *   [服务器端初始化器 (`TcpServerInitializer`)](#服务器端初始化器-tcpserverinitializer)
-    *   [客户端业务处理器 (`TcpClientHandler`)](#客户端业务处理器-tcpclienthandler)
-8.  [总结](#8-总结)
 
 ## 1. 项目概述
 
