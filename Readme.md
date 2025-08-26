@@ -50,24 +50,27 @@ Netty 提供了多种解决方案，本项目重点演示 `*LengthFieldBasedFram
 
 ## 4. 项目结构
 
-netty-demo/
-├── pom.xml
-└── src/
-└── main/
-└── java/
-└── com/
-└── netty/
-└── demo/
-├── common/
-│   ├── CustomMessage.java       # 自定义消息实体 (POJO)
-│   ├── CustomMessageDecoder.java # 将 ByteBuf 解码为 CustomMessage
-│   └── CustomMessageEncoder.java # 将 CustomMessage 编码为 ByteBuf
-├── client/
-│   ├── TcpClient.java           # 客户端启动类
-│   ├── TcpClientHandler.java    # 客户端业务逻辑及粘包模拟
-│   └── TcpClientInitializer.java# 客户端 Channel 初始化器
-└── server/
-├── TcpServer.java           # 服务器启动类
-├── TcpServerHandler.java    # 服务器业务逻辑，接收 CustomMessage
-└── TcpServerInitializer.java# 服务器 Channel 初始化器 (包含 LengthFieldBasedFrameDecoder)
+```text
+src
+└── main
+    ├── java
+    │   └── com
+    │       └── example
+    │           └── nettydemo
+    │               ├── NettyDemoApplication.java
+    │               ├── client
+    │               │   ├── TcpClient.java
+    │               │   ├── TcpClientHandler.java
+    │               │   └── TcpClientInitializer.java
+    │               ├── common
+    │               │   ├── CustomMessage.java
+    │               │   ├── CustomMessageDecoder.java
+    │               │   └── CustomMessageEncoder.java
+    │               └── server
+    │                   ├── TcpServer.java
+    │                   ├── TcpServerHandler.java
+    │                   └── TcpServerInitializer.java
+    └── resources
+        └── application.properties
+```
 
